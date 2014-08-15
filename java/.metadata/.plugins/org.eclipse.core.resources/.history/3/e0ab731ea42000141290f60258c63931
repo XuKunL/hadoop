@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Xian_zuoye2 {
+	static class Mapped extends Mapper<Object,Text,Text,Text>{
+		
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

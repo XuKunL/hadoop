@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0813;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.util.Tool;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SortByTemperatureUsingHashPartitioner extends Configured implements Tool{
+
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+
+}

@@ -1,0 +1,11 @@
+package org.zkpk.hadoopday0813;
+
+public class LookupRecordsByTemperature extends Configured implements Tool{
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

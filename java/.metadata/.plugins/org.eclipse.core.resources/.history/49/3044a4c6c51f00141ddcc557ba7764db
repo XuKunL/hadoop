@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Sum_zuoye1 {
+	
+	/**
+	 * map
+	 */
+	static class Mapped extends Mapper<Object,Text,Text,IntWritable >{
+		private Text uid =new Text();
+		private IntWritable one=new IntWritable();
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if (arr[2].toString().matches("\\w*.\\w+(\\.\\w+)+")){
+				uid.set(arr[2]);
+			}
+			context.write(uid, one);
+		}
+		
+	}
+	static class Reduced extends Reduce<Text>{
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

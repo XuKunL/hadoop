@@ -1,0 +1,873 @@
+[
+  {
+    "symbolicName": "hadoop-fairscheduler-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7e4d567bb5e471fd788c0aa2a5bcce9416c2e14e",
+    "jarFileModificationDate": "2013-07-23T06:26:30+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\hadoop-fairscheduler-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.mockito.mockito-all",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 5,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a927d8ae3b8d22eb745a74f94e59ce3882f2b524",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\mockito-all-1.8.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-thriftfs-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "046d76ae5004e1e902cd7f77639688fc7fb3a970",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\hadoop-thriftfs-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-daemon-1.0.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "17b0edfed469b8ba0e2b6479b39824989abcfaf5",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-daemon-1.0.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "oro-2.0.8",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5592374f834645c4ae250f4c9fbb314c9369d698",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\oro-2.0.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.sun.jersey.jersey-json",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "825621478fec59983106efaa032c679f925b4eff",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jersey-json-1.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "debdf7ea7fa7bf8a98869d2e102c9e6fff37445a",
+    "jarFileModificationDate": "2014-07-08T02:48:20.719+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\access-bridge-32.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.lang",
+    "version": {
+      "major": 2,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "16313e02a793435009f1e458fa4af5d879f6fb11",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-lang-2.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jasper-compiler-5.5.12",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c594866c64565344c0e7bdc9bf4fee70290c4dd5",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jasper-compiler-5.5.12.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-capacity-scheduler-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0c3887ce4bb73debec19a8a15eca904eb54d0c27",
+    "jarFileModificationDate": "2013-07-23T06:26:30+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\hadoop-capacity-scheduler-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.collections",
+    "version": {
+      "major": 3,
+      "minor": 2,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "761ea405b9b37ced573d2df0d1e3a4e0f9edc668",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-collections-3.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "52a3d0fffdc7b9ff61a1898b6dd1b6a1b72bce30",
+    "jarFileModificationDate": "2014-07-08T02:48:30.407+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.codec",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4216af16d38465bbab0f3dff8efa14204f7a399a",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-codec-1.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "aspectjrt-1.6.11",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "70afce58891e5f0566a968288c93120b977e3bd0",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\aspectjrt-1.6.11.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-logging-api-1.0.4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "544f72427e94a5c55b65a9b81c55c54059b4f993",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-logging-api-1.0.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2014-07-08T02:48:20.750+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "kfs-0.2.2",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c98cf239bd180198430d8caca8d586bf19be8b85",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\kfs-0.2.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jackson-mapper-asl",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 8,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "01bb32d9d2527c083a56e234acca49a48d3c65c8",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jackson-mapper-asl-1.8.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jasper-runtime-5.5.12",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f3a50a55414655b9843f5a089923ea83d49dc55e",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jasper-runtime-5.5.12.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit-4.5",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7059d3d3bedc1fca9b33cde8503095b3576a0bba",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\junit-4.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "aspectjtools-1.6.11",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1a1570313516208cfcc8e2dfebe08e417472ab3a",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\aspectjtools-1.6.11.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-client-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6d7f986ef390b5860322dcd17fdd061f136e5f62",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-client-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.configuration",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "32cadde23955d7681b0d94a2715846d20b425235",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-configuration-1.6.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.sun.jersey.jersey-core",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b6a0553c0eb3da45a9b8947a0a7283b3b9266d0d",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jersey-core-1.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c4c7923b11e98bc8d1d32bfd2ff6363d212ead80",
+    "jarFileModificationDate": "2014-07-08T02:48:20.750+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "hsqldb-1.8.0.10",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7e9978fdb754bce5fcd5161133e7734ecb683036",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\hsqldb-1.8.0.10.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slf4j.log4j12",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f670f260822311eb487993c38256757964aa5539",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\slf4j-log4j12-1.4.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.mortbay.jetty.servlet-api",
+    "version": {
+      "major": 2,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "22bff70037e1e6fa7e6413149489552ee2064702",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\servlet-api-2.5-20081211.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-test-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "96a93d16c33a629ed42fbbd25e556866ef5fa675",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-test-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.math",
+    "version": {
+      "major": 2,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b3c4bdc2778ddccceb8da2acec3e37bfa41303e9",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-math-2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-tools-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b08c16bd0448fbcadab67c4f8df837c094fdc91e",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-tools-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "725c8f9fede6dd5321e9c9c4dbc167eda2833056",
+    "jarFileModificationDate": "2014-07-08T02:48:34.617+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5b977bd068076825f84da0462b8870450a55bbdd",
+    "jarFileModificationDate": "2014-07-08T02:48:38.999+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "commons-logging",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5043bfebc3db072ed80fbd362e7caf00e885d8ae",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-logging-1.1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xmlenc-0.52",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d82554efbe65906d83b3d97bd7509289e9db561a",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\xmlenc-0.52.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-ant-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "68a3a8f3edeb032d54afb6753f4938b13f1ad228",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-ant-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-digester-1.8",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dc6a73fdbd1fa3f0944e8497c6c872fa21dca37e",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-digester-1.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.mortbay.jetty.util",
+    "version": {
+      "major": 6,
+      "minor": 1,
+      "micro": 26,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e5642fe0399814e1687d55a3862aa5a3417226a9",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jetty-util-6.1.26.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-minicluster-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "10f787912d72290e3c883660e0aea687683c861a",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-minicluster-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.mortbay.jetty.server",
+    "version": {
+      "major": 6,
+      "minor": 1,
+      "micro": 26,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2f546e289fddd5b1fab1d4199fbb6e9ef43ee4b0",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jetty-6.1.26.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8565b589257af76bda390460a281560f8093ae41",
+    "jarFileModificationDate": "2014-07-08T02:48:20.750+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.io",
+    "version": {
+      "major": 2,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fd51f906669f49a4ffd06650666c3b8147a6106e",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-io-2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "log4j",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 15,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f0a0d2e29ed910808c33135a3a5a51bba6358f7b",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\log4j-1.2.15.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-el-1.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1df2c042b3f2de0124750241ac6c886dbfa2cc2c",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-el-1.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-beanutils-1.7.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5675fd96b29656504b86029551973d60fb41339b",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-beanutils-1.7.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-beanutils-core-1.8.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "175dc721f87e4bc5cc0573f990e28c3cf9117508",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-beanutils-core-1.8.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "asm-3.2",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9bc1511dec6adf302991ced13303e4140fdf9ab7",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\asm-3.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jets3t-0.6.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9f95b944ccbbbeedd397e8f62e5690fd735a45e5",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jets3t-0.6.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.cli",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2bf96b7aa8b611c177d329452af1dc933e14501c",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-cli-1.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.eclipse.jdt.core",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "88c83ce444cf46d02494da37c9fa1eebc9ce9cea",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\core-3.1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.commons-compress",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "167799030eb088837bff7593eea3961c327e18ac",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jdeb-0.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-core-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d64292a3b8ccad657c67f1a8e9397ef41b3b204f",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-core-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "da987c821aa90a76d2cbd5be2536ee18fcee1ca3",
+    "jarFileModificationDate": "2014-07-08T02:48:20.719+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fb59520c90b830ad2b33b87026d69a3a3172e4f5",
+    "jarFileModificationDate": "2014-07-08T02:48:21.031+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3fd7709166f70fe311b45a7bafe7cdccbecf6b04",
+    "jarFileModificationDate": "2014-07-08T02:48:20.750+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "slf4j.api",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b00571426d641ebc3eff8170cd4182162b445fc5",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\slf4j-api-1.4.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hadoop-examples-1.2.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8ca8d457a5ce440d71de3c0391f646689fda8143",
+    "jarFileModificationDate": "2013-07-23T06:26:38+08:00",
+    "location": "H:\\hadoop-1.2.1\\hadoop-examples-1.2.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jackson-core-asl",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 8,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dd2e90bb710ea3bc4610e24299d6a4c8dac5049b",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jackson-core-asl-1.8.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jsch-0.1.42",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a86104b0f2e0c0bab5b0df836065823a99b5e334",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jsch-0.1.42.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.net",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2298164a7c2484406f2aa5ac85b205d39019896f",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-net-3.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5da320e46f1c616986563b2e788b5a0569cad088",
+    "jarFileModificationDate": "2014-07-08T02:48:20.750+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a53f825c7ee731984fd19ff56e52ee64e7e2ddd8",
+    "jarFileModificationDate": "2014-07-08T02:48:20.719+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1ff8a917c79ef3104a400efff3ddc5d7553b4671",
+    "jarFileModificationDate": "2014-07-08T02:48:38.423+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "commons-httpclient-3.0.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d6364bcc1b2b2aa69d008602d36a700453648560",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-httpclient-3.0.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.sun.jersey.jersey-server",
+    "version": {
+      "major": 1,
+      "minor": 8,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6da1231f5e2d7a9f7d194e292fc3695ba7710b2f",
+    "jarFileModificationDate": "2013-07-23T06:26:28+08:00",
+    "location": "H:\\hadoop-1.2.1\\lib\\jersey-server-1.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "42b6dd50e7a8aa63b401aece53aa623c9739abd9",
+    "jarFileModificationDate": "2014-07-08T02:48:21.811+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f831655c50b92c41e366442d09511ea84270c45e",
+    "jarFileModificationDate": "2014-07-08T02:48:21.031+08:00",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\jce.jar",
+    "javaRuntime": true
+  }
+]

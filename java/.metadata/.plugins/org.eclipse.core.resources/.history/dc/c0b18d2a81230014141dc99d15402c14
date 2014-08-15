@@ -1,0 +1,20 @@
+package org.zkpk.hadoopday0813;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class Max_Reducer extends Reducer<Text,IntWritable,Text,Text>{
+
+	@Override
+	protected void reduce(Text key, Iterable<IntWritable> values,
+			Context contxt)
+			throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		super.reduce(arg0, arg1, arg2);
+	}
+	
+	
+}

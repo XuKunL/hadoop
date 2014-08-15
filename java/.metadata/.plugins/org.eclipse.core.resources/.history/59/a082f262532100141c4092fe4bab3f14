@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0806;
+
+import org.apache.hadoop.mapreduce.Mapper;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Zuoye_3 {
+
+	static class Mapped extends Mapper<Object,Text,Text,Text>{
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

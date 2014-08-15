@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import java.io.IOException;
+
+
+/**
+ * @author Administrator
+ *
+ */
+public class JobBuilder2 {
+
+	static Job parseInputAndOutput(Tool tool,Configuration conf,String[] args) throws IOException{
+		if(args.length!=2){
+			printUsage(tool,"<input> <output>");
+			return null;
+		}
+		JobConf jobConf =new JobConf(conf,tool.getClass());
+		FileInputFormat.setInputPaths(jobConf, new Path(args[0]));
+		FileOutputFormat.setOutputPath(jobConf, new Path(args[1]));
+		return jobConf;
+	}
+	static void printUsage(Tool tool,String extraArgsUsage){
+		System.err.printf("Usage: %s[genericOptions] %s\n\n",tool.getClass().getSimpleName(),extraArgsUsage);
+		GenericOptionsParser.printGenericCommandUsage(System.err);
+		
+	}
+
+}

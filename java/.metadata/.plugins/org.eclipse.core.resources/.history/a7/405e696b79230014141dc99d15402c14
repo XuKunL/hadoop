@@ -1,0 +1,36 @@
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.util.Tool;
+import org.zkpk.hadoopday0813.JobBuilder3;
+
+/**
+ * 
+ */
+
+/**
+ * @author Administrator
+ *
+ */
+public class MissingTemperaturefields extends Configured implements Tool{
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		if(args.length!=1){
+			JobBuilder3.printUsage(this, "<job ID>");
+			return -1;
+		}
+		Job job=new Job(new JobConf(getConf));
+		String jobID =args[0];
+		RunningJob rjob=job.getJobID();
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

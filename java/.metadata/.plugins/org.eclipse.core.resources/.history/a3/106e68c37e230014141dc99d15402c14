@@ -1,0 +1,32 @@
+package org.zkpk.hadoopday0813;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.mapred.RunningJob;
+import org.apache.hadoop.util.Tool;
+
+public class MissTemperatureFileds extends Configured implements Tool{
+	
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		if(args.length!=1){
+			JobBuilder3.printUsage(this, "<job ID>");
+			return -1;
+		}
+		Job job=new Job(new JobConf(getConf()));
+		String jobID=args[0];
+		RunningJob rjob =job.getID();
+		if(job==null){
+			System.err.printf("No such job", jobID);
+		}
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

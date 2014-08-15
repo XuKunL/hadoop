@@ -1,0 +1,54 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Xian_zuoye1 {
+
+	static class Mapped extends Mapper<Object,Text,Text,Text>{
+
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			String keyw="ÏÉ½£ÆæÏÀ´«";
+			Text uid=new Text();
+			Text reco=new Text();
+			if(arr.length==6){
+				if(arr[2].indexOf(keyw)!=-1){
+					uid.set(arr[2]);
+					reco.set(value.toString());
+					context.write(uid, reco);
+				}
+			}
+		}
+		
+	}
+	static class Reduced extends Reducer<Text,Text,Text,Text>{
+
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

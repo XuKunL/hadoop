@@ -1,0 +1,73 @@
+package org.zkpk.hadoopday0812;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.JobClient;
+import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapred.OutputCollector;
+import org.apache.hadoop.mapred.TextOutputFormat;
+import org.apache.hadoop.mapred.lib.MultipleOutputs;
+import org.apache.hadoop.mapred.lib.NullOutputFormat;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.util.ToolRunner;
+
+public class PartitionByStationUsingMulitipleOutputs {
+	static class StationMapper extends Mapper<LongWritable,Text,Text,Text>{
+		private NcdcRecordParser parser=new NcdcRecordParser();
+
+		@Override
+		protected void map(LongWritable key, Text value, Context context)
+				throws IOException, InterruptedException {
+			parser.parse(value);
+			context.write(key, value);
+		}
+		
+	}
+	static class MultipleOutputsReducer extends Reducer<Text,Text,NullWritable,Text>{
+		private MultipleOutputs multipleOutputs;
+		public void configure(JobConf conf){
+			multipleOutputs =new MultipleOutputs(conf);
+		}
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+			OutputCollector collector=multipleOutputs.getCollector("station", key.toString().replace("-", ""),reporter);
+			while (values.hashCode()){
+				collector.collect(NullWritable.get(), values.next());
+			}
+				
+			
+		}
+		public void close()throws IOException{
+			mutipleOutput.close();
+		}
+	}
+	public int run (String [] args)throws IOException{
+		JobConf conf=JobBuilder3.parseInputAndOutput(this, getConf(), args);
+		if(conf==null){
+			return -1;
+		}
+		conf.setMapperClass(StationMapper.class);
+		conf.setMapOutputKeyClass(Text.class);
+		conf.setReducerClass(MultipleOutputsReducer.class);
+		conf.setOutputKeyClass(NullWritable.class);
+		conf.setOutputFormat(NullOutputFormat.class);
+		MultipleOutputs.addMultiNamedOutput(conf, "station", TextOutputFormat.class, NullWritable.class, Text.class);
+		JobClient.runJob(conf);
+		return 0;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception{
+		int exitCode=ToolRunner.run(new PartitionByStationUsingMultipleOutputs(), args);
+		System.exit(exitCode);
+	}
+
+}

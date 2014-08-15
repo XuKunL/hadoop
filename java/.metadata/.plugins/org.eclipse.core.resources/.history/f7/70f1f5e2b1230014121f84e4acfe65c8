@@ -1,0 +1,64 @@
+package org.cyt.hadoop.day0806_3;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
+
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class RandomReduce extends Reducer<Text, Text, Text, Text> {
+
+	private HashMap<String,ArrayList<String>> maps=new HashMap();
+	private long shu;
+	
+	@Override
+	protected void reduce(Text key, Iterable<Text> value,
+			Context context)
+			throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		ArrayList<String> arrl=new ArrayList();
+		
+		for(Text val:value){
+			arrl.add(val.toString());
+			shu++;
+		}
+		
+		
+		
+		Random R1=new Random();
+
+		
+		if(R1.nextInt(100)==1&&arrl.size()>2){
+			maps.put(key.toString(), arrl);
+
+		}	
+	
+		
+		if(shu==50000){
+			int[] array=new int[10];
+			for(int i=0;i<10;i++){
+		    	array[i]=R1.nextInt(maps.size());
+		    	for(int j=0;j<i;j++){
+		    		if(array[i]==array[j]){
+		    			i--;
+		    			break;
+		    		}
+		    	}
+		    }
+			String[] str=maps.keySet().toArray(new String[maps.size()]);
+			for(String s:maps.keySet()){
+		    	for(int i:array){
+		    		if(s.equals(str[i])){
+		    			for(int j=0;j<maps.get(s).size();j++){
+		  
+		    				context.write(new Text(s),new Text(maps.get(s).get(j)));
+		    			}
+		    		}
+		    	}
+		    }
+		}
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=hadoop2/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(MapRunner.class[MapRunner" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(MapReduceBase.class[MapReduceBase" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop2/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(ReduceTask$ReduceValuesIterator.class[ReduceValuesIterator" modifiers="2" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.fs(LocalFileSystem.class[LocalFileSystem" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.fs(FsShell.class[FsShell" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.fs(ChecksumFileSystem.class[ChecksumFileSystem" modifiers="1057" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io.file.tfile(Compression.class[Compression" modifiers="48" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io.compress(CompressionCodec.class[CompressionCodec" modifiers="1537" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/C:\/Program Files \(x86)\/Java\/jdk1.7.0_17\/jre\/lib\/rt.jar&lt;com.sun.corba.se.spi.ior(Writeable.class[Writeable" modifiers="1537" timestamp="1404758918423"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(Writable.class[Writable" modifiers="1537" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/C:\/Program Files \(x86)\/Java\/jdk1.7.0_17\/jre\/lib\/rt.jar&lt;java.io(WriteAbortedException.class[WriteAbortedException" modifiers="33" timestamp="1404758918423"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(WritableComparable.class[WritableComparable" modifiers="1537" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(WritableComparator.class[WritableComparator" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(ObjectWritable.class[ObjectWritable" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(GenericWritable.class[GenericWritable" modifiers="1057" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.io(MapWritable.class[MapWritable" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapreduce(Job.class[Job" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred.lib(CombineFileInputFormat.class[CombineFileInputFormat" modifiers="1057" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.record(Record.class[Record" modifiers="1057" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(SequenceFileAsBinaryInputFormat.class[SequenceFileAsBinaryInputFormat" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapreduce.lib.input(MultipleInputs.class[MultipleInputs" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(RecordReader.class[RecordReader" modifiers="1537" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.record(RecordInput.class[RecordInput" modifiers="1537" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/C:\/Program Files \(x86)\/Java\/jdk1.7.0_17\/jre\/lib\/rt.jar&lt;java.lang(System.class[System" modifiers="49" timestamp="1404758918423"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapreduce.lib.partition(InputSampler.class[InputSampler" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred(JobClient.class[JobClient" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.fs(Path.class[Path" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapred.lib(InputSampler$Sampler.class[Sampler" modifiers="1545" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.util(ToolRunner.class[ToolRunner" modifiers="33" timestamp="1374531998000"/>
+<typeInfo handle="=hadoop/H:\/hadoop-1.2.1\/hadoop-core-1.2.1.jar&lt;org.apache.hadoop.mapreduce(Partitioner.class[Partitioner" modifiers="1057" timestamp="1374531998000"/>
+</typeInfoHistroy>

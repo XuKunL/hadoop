@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import java.io.IOException;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Mini_new {
+
+	public int run(String[] args) throws IOException{
+		Job job=new JobBuilder3.parseIntputAndOutput(this,getConf(),args);
+		if(job==null){
+			return -1;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

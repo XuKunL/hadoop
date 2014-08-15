@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.MapReduceBase;
+import org.apache.hadoop.mapred.Mapper;
+import org.apache.hadoop.mapred.OutputCollector;
+import org.apache.hadoop.mapred.Reducer;
+import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapred.lib.MultipleTextOutputFormat;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.util.Tool;
+
+
+
+/**
+ * @author Administrator
+ *
+ */
+public class Partition_7_5 extends Configured implements Tool {
+
+	static class StationMapper extends MapReduceBase implements Mapper<LongWritable ,Text,Text,Text>{
+		private NcdcRecordParser parser=new NcdcRecordParser();
+
+		@Override
+		public void map(LongWritable key, Text value,
+				OutputCollector<Text, Text> output, Reporter reporter)
+				throws IOException {
+			parser.parse(value);
+			output.collect(new Text(parser.getStationId), value);
+		}
+	}
+	static class StationReducer extends MapReduceBase implements Reducer<Text,Text,NullWritable,Text>{
+
+		@Override
+		public void reduce(Text key, Iterator<Text> values,
+				OutputCollector<NullWritable, Text> output, Reporter reporter)
+				throws IOException {
+			while (values.hasNext()){
+				output.collect(NullWritable.get(), values.next());
+			}
+			
+		}
+		static class StationNameMultipleTextOutputFormat extends MultipleTextOutputFormat<NullWritable,Text>{
+			private NcdcRecordParser parser=new NcdcRecordParser();
+			protected String generateFileNameForkeyValue(NullWritable key,Text value,String name){
+				parser.parse(value);
+				return parser.getStationId();
+			}
+		}
+	}
+}

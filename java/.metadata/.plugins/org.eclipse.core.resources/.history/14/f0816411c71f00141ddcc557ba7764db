@@ -1,0 +1,72 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Sum_zuoye1 {
+	
+	/**
+	 * map
+	 */
+	static class Mapped extends Mapper<Object,Text,Text,IntWritable >{
+		private Text uid =new Text();
+		private IntWritable one=new IntWritable();
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if (arr[2].toString().matches("\\w*.\\w+(\\.\\w+)+")){
+				uid.set(arr[2]);
+			}
+			context.write(uid, one);
+		}
+		
+	}
+	static class Reduced extends Reducer<Text,IntWritable,Text,IntWritable>{
+		int sum=0;
+		@Override
+		protected void reduce(Text key, Iterable<IntWritable> values,
+				Context context)
+				sum++;
+				throws IOException, InterruptedException {
+				int sum2=0;
+				for(IntWritable value:values){
+					sum2+=value.get();
+				}
+		}
+		public void run(Context context) throws IOException, InterruptedException {
+		    setup(context);
+		    try {
+		      while (context.nextKey()) {
+		        reduce(context.getCurrentKey(), context.getValues(), context);
+		      }
+		    } finally {
+		      cleanup(context);
+		    }
+		    double chu=(sum2/sumsum);
+		    System.out.println(sumsum);
+		    String chu2=""+(chu*100)+"%";
+		    Text chu3=new Text();
+		    chu3.set(chu2.toString());
+		    result.set(sum2);
+		    context.write(chu3, result);
+		  }
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

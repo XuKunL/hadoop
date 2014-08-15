@@ -1,0 +1,10 @@
+package org.zkpk.hadoopday0811;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class IdentityRed extends Reducer<IntWritable,IntWritable,Text,Text>{
+
+	
+}

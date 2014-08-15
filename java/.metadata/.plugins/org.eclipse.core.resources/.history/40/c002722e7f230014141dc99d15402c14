@@ -1,0 +1,41 @@
+package org.zkpk.hadoopday0813;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.mapred.RunningJob;
+import org.apache.hadoop.mapreduce.Counters;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.util.Tool;
+
+public class MissTemperatureFileds extends Configured implements Tool{
+	
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		if(args.length!=1){
+			JobBuilder3.printUsage(this, "<job ID>");
+			return -1;
+		}
+		Job job=new Job(new JobConf(getConf()));
+		String jobID=args[0];
+		RunningJob rjob =job.getID();
+		if(job==null){
+			System.err.printf("No such job", jobID);
+			return -1;
+		}
+		if(!job.isComplete()){
+			System.err.printf("Job is not complete", jobID);
+			return -1;
+		}
+		Counters counters=job.getCounters();
+		long missing = counters.getCounter(Max);
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

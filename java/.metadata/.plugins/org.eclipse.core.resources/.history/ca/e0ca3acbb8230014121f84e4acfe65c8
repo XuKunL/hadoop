@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0813;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SortByTemperatureToMapFile extends Configured implements Tool{
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

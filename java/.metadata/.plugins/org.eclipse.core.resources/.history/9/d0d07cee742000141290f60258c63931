@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Rank_zuoye {
+
+	static class Mappred extends Mapper<Object,Text,IntWritable,IntWritable>{
+		IntWritable one=new IntWritable(1);
+		IntWritable two=new IntWritable(2);
+		IntWritable three=new IntWritable(3);
+		IntWritable four=new IntWritable(4);
+		IntWritable five=new IntWritable(5);
+		IntWritable six=new IntWritable(6);
+		IntWritable seven=new IntWritable(7);
+		IntWritable eight=new IntWritable(8);
+		IntWritable nine=new IntWritable(9);
+		IntWritable ten=new IntWritable(10);
+		IntWritable rank=new IntWritable(1);
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if(arr.length==6){
+				if(Integer.parseInt(arr[3])==1){
+					
+				}
+			}
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

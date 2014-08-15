@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+/**
+ * @author Administrator
+ *
+ */
+public class IdentityMap extends Mapper<Object,Text,IntWritable,IntWritable >{
+
+	
+
+}

@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class IdentityReducer {
+
+	static class Reduced extends Reducer<Text,BytesWritable,Text,Text>{
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package org.zkpk.hadoopday0814;
+
+import org.apache.hadoop.io.WritableComparable;
+
+public class IntPair implements WritableComparable<IntPair>{
+
+	
+}

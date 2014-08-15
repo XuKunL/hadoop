@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Rank_zuoye {
+
+	static class Mappred extends Mapper<Object,Text,IntWritable,IntWritable>{
+
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if(arr.length==6){
+				
+			}
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

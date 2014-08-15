@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.mapreduce.lib.input.FileSplit;
+
+/**
+ * @author Administrator
+ *
+ */
+public class WholeFileRecordReader {
+
+	private FileSplit fileSplit;
+	private Configuration conf;
+	private boolean processed = false;
+	
+	public WholeFileRecordReader(FileSplit fileSplit,Configuration conf)throws Exception{
+		this.fileSplit=fileSplit;
+		this.conf=conf;
+	}
+	
+
+}

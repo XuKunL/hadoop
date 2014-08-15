@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0814;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SortByTemperatureUsingTotalOrderPartitioner extends Configured implements Tool {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

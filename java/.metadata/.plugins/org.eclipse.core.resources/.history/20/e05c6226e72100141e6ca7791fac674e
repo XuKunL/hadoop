@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Whole_7_2 extends FileInputFormat<NullWritable,BytesWritable>{
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

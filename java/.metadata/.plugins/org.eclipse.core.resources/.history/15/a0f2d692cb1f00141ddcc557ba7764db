@@ -1,0 +1,76 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.DoubleWritable;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.jobcontrol.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Sum_zuoye1 {
+	
+	/**
+	 * map
+	 */
+	static double sum=0;
+	static class Mapped extends Mapper<Object,Text,Text,Text >{
+		private Text uid =new Text();
+		private Text one=new Text();
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if (arr.length==6){
+				uid.set(arr[1]);
+				one.set(arr[2]);
+			}
+			context.write(uid, one);
+		}
+		
+	}
+	static class Reduced extends Reducer<Text,Text,Text,DoubleWritable>{
+		private DoubleWritable result=new DoubleWritable();
+		double sum2=0;
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+				sum++;
+				if(values.toString().matches("\\w*.\\w+(\\.\\w+)+")){
+					sum2++;
+				}
+		}
+		public void run(Context context) throws IOException, InterruptedException {
+		    setup(context);
+		    try {
+		      while (context.nextKey()) {
+		        reduce(context.getCurrentKey(), context.getValues(), context);
+		      }
+		    } finally {
+		      cleanup(context);
+		    }
+		   double chu=(sum2/sum);
+		   String chu2=""+(chu*100)+"%";
+		   Text chu3=new Text();
+		   chu3.set(chu2);
+		   result.set(sum2);
+		   context.write(chu3, result);
+		  }
+	}
+	public static void main(String[] args) throws Exception{
+		Job job=new Job();
+		
+		
+	}
+
+}

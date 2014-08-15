@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import java.io.IOException;
+
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.lib.IdentityMapper;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.util.ToolRunner;
+
+
+/**
+ * @author Administrator
+ *
+ */
+public class Mini_new {
+
+	public int run(String[] args) throws IOException{
+		Job job=JobBuilder3.parseInputAndOutput(this,getConf(),args);
+		if(job==null){
+			return -1;
+		}
+		job.setJarByClass(Mini_new.class);
+		job.setMapperClass(IdentityMapper.class);
+		job.setReducerClass(IdentityRuducer.class);
+		job.setOutputkeyClass(LongWritable.class);
+		job.setOutputValueClass(Text.clss);
+		FileInputFormat.setInputPaths(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		System.exit(job.waitForCompletion(true)? 0:1);
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		int exitCode=ToolRunner.run(new Mini_new(), args);
+		System.exit(exitCode);
+	}
+
+}

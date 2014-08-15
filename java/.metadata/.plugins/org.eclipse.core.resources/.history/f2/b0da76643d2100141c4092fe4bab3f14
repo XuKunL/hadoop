@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.mapred.lib.IdentityMapper;
+import org.apache.hadoop.mapreduce.Job;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Mini_new {
+
+	public int run(String[] args) throws IOException{
+		Job job=new JobBuilder3.parseIntputAndOutput(this,getConf(),args);
+		if(job==null){
+			return -1;
+		}
+		job.setJarByClass(Mini_new.class);
+		job.setMapperClass(IdentityMapper.class);
+		job.setReducerClass(IdentityRuducer.class);
+		job.setOutputkeyClass(LongWritable.class);
+		job.setOutputValueClass(Text.clss);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

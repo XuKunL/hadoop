@@ -1,0 +1,97 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+/**
+ * @author Administrator
+ *
+ */
+public class Mul_zuoye1  {
+
+	static class Mapped1 extends Mapper<Object,Text,Text,Text>{
+		Text keys=new Text();
+		Text values=new Text("1");
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr=value.toString();
+			keys.set(arr);
+			context.write(keys, values);
+		}
+		
+	}
+	static class Mapped2 extends Mapper<Object,Text,Text,Text>{
+		Text keys=new Text();
+		Text values=new Text();
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if(arr.length==6){
+				keys.set(arr[1]);
+				values.set(arr[2]);
+				context.write(keys, values);
+			}
+		}
+		
+	}
+	static class Reduced extends Reducer<Text,Text,Text,Text>{
+		Text keys=new Text();
+		Text keywords=new Text();
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+
+				
+				for(Text value:values){
+					if(key.toString()=="1"){
+						keys.set(key);
+					}
+					keywords.set(value);
+				}
+		}
+
+		@Override
+		protected void cleanup(
+				Context context)
+				throws IOException, InterruptedException {
+			super.cleanup(context);
+			context.write(keys, keywords);
+		}
+		
+	}
+	public static void main(String[] args) throws Exception {
+		
+		if(args.length!=3){
+			throw new Exception ("you bu gou 3 ge");
+		}
+		
+		Job job=new Job(new Configuration(),"uid");
+		job.setJarByClass(Mul_zuoye1.class);
+		Path inputPath1=new Path(args[0]);
+		Path inputPath2=new Path(args[1]);
+		Path outputPath1=new Path(args[2]);
+		MultipleInputs.addInputPath(job, inputPath1, TextInputFormat.class, Mapped1.class);
+		MultipleInputs.addInputPath(job, inputPath2, TextInputFormat.class, Mapped2.class);
+		
+		job.setReducerClass(Reduced.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(Text.class);
+		FileOutputFormat.setOutputPath(job, outputPath1);
+		System.exit(job.waitForCompletion(true)? 0:1);
+	}
+
+}

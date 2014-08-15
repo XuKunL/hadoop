@@ -1,0 +1,7 @@
+package org.zkpk.hadoopday0812;
+
+import org.apache.hadoop.mapred.RecordReader;
+
+public interface WholeFileRecordReader extends RecordReader<K, V> {
+
+}

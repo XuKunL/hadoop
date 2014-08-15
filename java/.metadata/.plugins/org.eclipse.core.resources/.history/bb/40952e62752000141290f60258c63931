@@ -1,0 +1,88 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Rank_zuoye {
+
+	static class Mappred extends Mapper<Object,Text,IntWritable,IntWritable>{
+		IntWritable one=new IntWritable(1);
+		IntWritable two=new IntWritable(2);
+		IntWritable three=new IntWritable(3);
+		IntWritable four=new IntWritable(4);
+		IntWritable five=new IntWritable(5);
+		IntWritable six=new IntWritable(6);
+		IntWritable seven=new IntWritable(7);
+		IntWritable eight=new IntWritable(8);
+		IntWritable nine=new IntWritable(9);
+		IntWritable ten=new IntWritable(10);
+		IntWritable rank=new IntWritable(1);
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if(arr.length==6){
+				if(Integer.parseInt(arr[3])==1){
+					context.write(one, rank);
+				}
+				if(Integer.parseInt(arr[3])==2){
+					context.write(two, rank);
+				}
+				if(Integer.parseInt(arr[3])==3){
+					context.write(three, rank);
+				}
+				if(Integer.parseInt(arr[3])==4){
+					context.write(four, rank);
+				}
+				if(Integer.parseInt(arr[3])==5){
+					context.write(five, rank);
+				}
+				if(Integer.parseInt(arr[3])==6){
+					context.write(six, rank);
+				}
+				if(Integer.parseInt(arr[3])==7){
+					context.write(seven, rank);
+				}
+				if(Integer.parseInt(arr[3])==8){
+					context.write(eight, rank);
+				}
+				if(Integer.parseInt(arr[3])==9){
+					context.write(nine, rank);
+				}
+				if(Integer.parseInt(arr[3])==10){
+					context.write(ten, rank);
+				}
+			}
+		}
+		
+	}
+	static class Reduced extends Reducer<IntWritable,IntWritable,IntWritable,IntWritable>{
+
+		@Override
+		protected void reduce(IntWritable key, Iterable<IntWritable> values,
+				 Context context)
+				throws IOException, InterruptedException {
+			// TODO Auto-generated method stub
+			super.reduce(arg0, arg1, arg2);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+/**
+ * @author Administrator
+ *
+ */
+public class IdentityReducer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

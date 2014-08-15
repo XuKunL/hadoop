@@ -1,0 +1,74 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0813;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.JobClient;
+import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapred.MapReduceBase;
+import org.apache.hadoop.mapred.Mapper;
+import org.apache.hadoop.mapred.OutputCollector;
+import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.zkpk.hadoopday0812.JobBuilder3;
+import org.zkpk.hadoopday0812.NcdcRecordParser;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Max_8_1 extends Configured implements Tool{
+	enum Temperature{
+		MISSING,
+		MALFORMED
+	}
+	static class MaxTemperatureMapperWithCounters extends MapReduceBase implements Mapper<LongWritable,Text,Text,IntWritable>{
+		private NcdcRecordParser parser =new NcdcRecordParser();
+
+		@Override
+		public void map(LongWritable key, Text value,
+				OutputCollector<Text, IntWritable> output, Reporter reporter)
+				throws IOException {
+			// TODO Auto-generated method stub
+			parser.parse(value);
+			if(parser.isValidTemperature()){
+				int airTemperature=parser.getAirTemperature();
+				output.collect(new Text(parser.getYear()), new IntWritable(airTemperature));
+			}else if (parser.isValidTemperature()){
+				reporter.incrCounter(Temperature.MISSING, 1);
+			}
+			reporter.incrCounter("TemperatureQulity", parser.getQuality(),1);
+		}
+		
+	}
+	public int run(String []args)throws IOException {
+		Job conf=JobBuilder3.parseInputAndOutput(this, getConf(), args);
+		if(conf == null){
+			return -1;
+		}
+		conf.setOutputKeyClass(Text.class);
+		conf.setOutputKeyClass(IntWritable.class);
+		conf.setMapperClass(MaxTemperatureMapperWithCounters.class);
+		conf.setCombinerClass(Max_Reducer.class);
+		conf.setReducerClass(Max_Reducer.class);
+		JobClient.runJob(conf);
+		return 0;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception{
+		// TODO Auto-generated method stub
+		int exitCode=ToolRunner.run(new Max_8_1(), args);
+		System.exit(exitCode);
+	}
+
+}

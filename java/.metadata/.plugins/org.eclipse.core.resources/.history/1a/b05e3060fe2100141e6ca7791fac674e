@@ -1,0 +1,17 @@
+package org.zkpk.hadoopday0812;
+
+import org.apache.hadoop.mapred.RecordReader;
+
+
+
+public class WholeFileRecordReader extends RecordReader<NullWritable, BytesWritable> {
+	private FileSplit fileSplit;
+	private Configuration conf;
+	private boolean processed =false;
+	
+	public WholeFileRecordReader (FileSplit fileSplit ,Configuration conf){
+		this.fileSplit=fileSplit;
+		this.conf=conf;
+	}
+	
+}

@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0812;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.lib.MultipleTextOutputFormat;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Partition_7_5 {
+
+	static class StationMapper extends Mapper<Text ,Text,Text,Text>{
+		private NcdcRecordParser parser=new NcdcRecordParser();
+		public void map(Text key,Text value,Context context)throws IOException{
+			parser.parse(value);
+			context.write(key, value);
+		}
+		
+	}
+	static class StationReducer extends Reducer<Text,Text,NullWritable,Text>{
+
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+				while(values.hasNext()){
+					context.write(NullWritable.get(),values.next());
+				}
+		}
+		
+	}
+	static class StationNameMultipleTextOutputFormat extends MultipleTextOutputFormat<NullWritable,Text>{
+		private NcdcRecordParser parser=new NcdcRecordParser();
+		protected String generateFileNameForkeyValue(NullWritable key,Text value,String name){
+			parser.parse(value);
+			return parser.getStationId();
+		}
+	}
+	public int run (String [] args) throws IOException {
+		JobConf conf=JobBuilder3.parseInputAndOutput(this, getJob(), args);
+		if(job==null){
+			return -1;
+		}
+		conf.setMapperClass(StationMapper.class);
+		conf.setOutputKeyClass(Text.class);
+		conf.setReducerClass(StationRuducer.class);
+		conf.setOutputFormat(StationNameMultipleTextOutputFormat.class);
+		
+		JobClient.runJob(conf);
+		return 0;
+	}
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		int exitCode=ToolRunner.run(new PartitionByStationUsingMultipleOutputFormat, args);
+		System.exit(exitCode);
+	}
+
+}

@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Mini_new {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

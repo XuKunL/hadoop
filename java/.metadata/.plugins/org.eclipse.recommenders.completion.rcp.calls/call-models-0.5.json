@@ -1,0 +1,27 @@
+{
+  "H:\\hadoop-1.2.1\\hadoop-core-1.2.1.jar": {
+    "location": "H:\\hadoop-1.2.1\\hadoop-core-1.2.1.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027H:\\hadoop-1.2.1\\hadoop-core-1.2.1.jar\u0027. Neither fingerprint \u0027d64292a3b8ccad657c67f1a8e9397ef41b3b204f\u0027 nor symbolic name \u0027hadoop-core-1.2.1\u0027 are known."
+  },
+  "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jdk1.7.0_17\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "H:\\hadoop-1.2.1\\lib\\jdeb-0.8.jar": {
+    "location": "H:\\hadoop-1.2.1\\lib\\jdeb-0.8.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027H:\\hadoop-1.2.1\\lib\\jdeb-0.8.jar\u0027. Neither fingerprint \u0027167799030eb088837bff7593eea3961c327e18ac\u0027 nor symbolic name \u0027org.apache.commons.commons-compress\u0027 are known."
+  },
+  "H:\\hadoop-1.2.1\\lib\\commons-io-2.1.jar": {
+    "coordinate": "org.apache.commons:org.apache.commons.io:zip:call:2.0.0",
+    "location": "H:\\hadoop-1.2.1\\lib\\commons-io-2.1.jar",
+    "status": "RESOLVED"
+  },
+  "F:\\java\\hadoop\\src": {
+    "location": "F:\\java\\hadoop\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027F:\\java\\hadoop\\src\u0027. Skipped."
+  }
+}

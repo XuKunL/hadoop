@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0814;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.util.Tool;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SortByTemperatureUsingTotalOrderPartitioner extends Configured implements Tool {
+	
+	
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		JobConf conf =JoBuilder3.
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,59 @@
+package org.zkpk.hadoopday0812;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.BytesWritable;
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapred.SequenceFileOutputFormat;
+import org.apache.hadoop.mapred.lib.IdentityReducer;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
+import org.apache.hadoop.util.ToolRunner;
+
+
+
+
+
+public class Small_7_4 {
+
+	static class SequenceFileMapper extends Mapper<NullWritable,BytesWritable,Text,BytesWritable>{
+		private Job job;
+		public void configure (Job job){
+			this.job=job;
+		}
+		@Override
+		protected void map(NullWritable key, BytesWritable value,
+				Context context) throws IOException, InterruptedException {
+			//String filename=job.gget("map.input.file");
+			context.write(new Text("map.input.file"),value);
+		}
+
+
+		
+	}
+
+	@Override
+	public int run(String []args) throws IOException, InterruptedException {
+		Job job=JobBuilder3.parseInputAndOutput(this, getJob1(), args);
+		if(job == null){
+			return -1;
+		}
+		job.setInputFormatClass(WholeFileInputFormat.class);
+		job.setOutputFormatClass(SequenceFileOutputFormat.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(BytesWritable.class);
+		job.setMapperClass(SequenceFileMapper.class);
+		job.setReducerClass(IdentityReducer.class);
+		System.exit(job.waitForCompletion(true)? 0:1);
+		return 0;
+	  }
+	
+	
+	
+	public static void main (String args[]) throws Exception{
+		int exitCode =ToolRunner.run(new SmallFilesToSequenceFileConverter(), args);
+		System.exit(exitCode);
+	}
+}

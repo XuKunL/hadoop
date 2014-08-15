@@ -1,0 +1,19 @@
+package org.zkpk.hadoopday0812;
+
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class PartitionByStationUsingMulitipleOutputs {
+	static class StationMapper extends Mapper<LongWritable,Text,Text,Text>{
+		private NcdcRecordParser parser=new NcdcRecordParser();
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

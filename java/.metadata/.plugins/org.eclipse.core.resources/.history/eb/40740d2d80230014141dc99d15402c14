@@ -1,0 +1,46 @@
+package org.zkpk.hadoopday0813;
+
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.mapred.RunningJob;
+import org.apache.hadoop.mapreduce.Counter;
+import org.apache.hadoop.mapreduce.Counters;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+
+public class MissTemperatureFileds extends Configured implements Tool{
+	
+	
+	@Override
+	public int run(String[] args) throws Exception {
+		if(args.length!=1){
+			JobBuilder3.printUsage(this, "<job ID>");
+			return -1;
+		}
+		Job job=new Job(new JobConf(getConf()));
+		String jobID=args[0];
+		RunningJob rjob =job.getID();
+		if(job==null){
+			System.err.printf("No such job", jobID);
+			return -1;
+		}
+		if(!job.isComplete()){
+			System.err.printf("Job is not complete", jobID);
+			return -1;
+		}
+		Counters counters=job.getCounters();
+		Counter missing = counters.findCounter(Max_8_1.Temperature.MISSING);
+		long total = counters.findCounter("org.apache.hadoop.mapred. Task$Counter","MAP_INPUT_RECORDS").getCounter();
+		System.out.printf("Records with missing temperature fields: %.2f%%\n",100.0 * missing / total);
+		return 0;
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception {
+		int exitCode=ToolRunner.run(new MissingTemperatureFields(), args);
+
+	}
+
+}

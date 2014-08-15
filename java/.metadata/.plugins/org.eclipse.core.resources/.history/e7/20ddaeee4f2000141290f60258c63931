@@ -1,0 +1,110 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0808;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.Reducer;
+
+
+
+/**
+ * @author Administrator
+ *
+ */
+public class Url_zuoye3{
+	
+	/**
+	 * map
+	 */
+	static double sum=0;
+	static class Mapped extends Mapper<Object,Text,IntWritable,Text >{
+		
+		IntWritable one=new IntWritable(1);
+		IntWritable two=new IntWritable(2);
+		IntWritable u=new IntWritable(1);
+		@Override
+		protected void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String arr[]=value.toString().split("\t",-1);
+			if (arr.length==6){
+				if(value.toString().matches("\\w*.\\w+(\\.\\w+)+")){
+					context.write(value, one);
+					if(arr[2].indexOf(arr[5])!=-1){
+						context.write(key, value)
+					}
+				}
+					uid.set(arr[5]);
+					one.set(arr[2]);
+			}
+			context.write(uid, one);
+		}
+		
+	}
+	static class Reduced extends Reducer<Text,Text,Text,Text>{
+		private Text result=new Text();
+		double sum2=0;
+		@Override
+		protected void reduce(Text key, Iterable<Text> values,
+				Context context)
+				throws IOException, InterruptedException {
+				
+			    
+				for(Text  value:values){
+					if(value.toString().matches("\\w*.\\w+(\\.\\w+)+")){
+					sum++;
+						if((value.toString().indexOf(key.toString()))!=-1){
+							sum2++;
+						}
+					}
+				}
+				
+			
+			
+		}
+		public void run(Context context) throws IOException, InterruptedException {
+		    setup(context);
+		    try {
+		      while (context.nextKey()) {
+		        reduce(context.getCurrentKey(), context.getValues(), context);
+		      }
+		    } finally {
+		      cleanup(context);
+		    }
+		   double chu=(sum2/sum);
+		   String chu2=""+(chu*100)+"%";
+		   Text chu3=new Text("URL%");
+		   result.set(chu2);
+		   context.write(chu3, result);
+		  }
+	}
+	public static void main(String[] args) throws Exception{
+		if(args.length!=2){
+			throw new Exception ("you bu gou 2 ge");
+		}
+		Job job=new Job(new Configuration(),"Keyword");
+		job.setJarByClass(Url_zuoye3.class);
+		job.setMapperClass(Mapped.class);
+		job.setReducerClass(Reduced.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(Text.class);
+		Path inputPath1=new Path(args[0]);
+		Path outputPath1=new Path(args[1]);
+		FileInputFormat.setInputPaths(job, inputPath1);
+		FileOutputFormat.setOutputPath(job, outputPath1);
+		System.exit(job.waitForCompletion(true)? 0:1);
+		
+		
+	}
+
+}

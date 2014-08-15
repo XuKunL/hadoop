@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package org.zkpk.hadoopday0811;
+
+import org.apache.hadoop.mapred.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.util.Tool;
+
+/**
+ * @author Administrator
+ *
+ */
+public class JobBuilder3 {
+
+	static Job parseInputAndOutput(Tool tool,Configuration job,String[] args){
+		if(args.length!=2){
+			printUsage(tool,"<input> <output>");
+			return null;
+		}
+		Job job =new Job(job, tool.getClass());
+		FileInputFormat.setInputPaths(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
